@@ -23,9 +23,12 @@ for header in header_text:
     except:
         pass
 
+counted_data = Counter(data)
+
 # CSV File
 with open('infodata.csv', 'w', encoding='utf-8', newline='\n') as csv_file:
     writer = csv.writer(csv_file)
-    
-    for line in data:
-        writer.writerow(line)
+
+    # Writing rows
+    for item in counted_data.most_common(25):
+        writer.writerow([item[0], item[1]])
