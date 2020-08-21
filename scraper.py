@@ -23,6 +23,7 @@ for header in header_text:
     except:
         pass
 
+# Using Counter object to represent the data
 counted_data = Counter(data)
 
 # CSV File
