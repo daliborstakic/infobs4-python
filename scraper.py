@@ -31,5 +31,5 @@ with open('infodata.csv', 'w', encoding='utf-8', newline='\n') as csv_file:
     writer = csv.writer(csv_file)
 
     # Writing rows
-    for item in counted_data.most_common(25):
+    for item in counted_data.most_common(30):
         writer.writerow([item[0], item[1]])
